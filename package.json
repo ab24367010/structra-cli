@@ -1,0 +1,14 @@
+{
+  "name": "structra",
+  "version": "1.1.0",
+  "description": "CLI tool for scaffolding web project structures",
+  "bin": {
+    "structra": "./structra.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "inquirer": "^9.2.7",
+    "chalk": "^5.3.0",
+    "tree-node-cli": "^1.0.0"
+  }
+}
