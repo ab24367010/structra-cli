@@ -2,7 +2,7 @@
 
 🚀 **Structra CLI** бол Node.js дээр бүтээгдсэн интерактив CLI хэрэгсэл бөгөөд таны HTML/CSS/JS болон бусад вэб төслүүдэд зориулсан хавтас, файл үүсгэх үйл явцыг автоматжуулдаг.
 
-![version](https://img.shields.io/badge/version-1.1-blue)
+![version](https://img.shields.io/badge/version-1.1.1-blue)
 ![status](https://img.shields.io/badge/status-active-brightgreen)
 ![node](https://img.shields.io/badge/node-%3E%3D16.0.0-lightgrey)
 
@@ -21,6 +21,7 @@
 ## ⚙️ Суулгах
 
 ```bash
-git clone https://github.com/your-username/structra-cli.git
+git clone https://github.com/ab24367010/structra-cli.git
 cd structra-cli
+npm install
 npm install -g .
