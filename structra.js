@@ -76,9 +76,20 @@ async function main() {
     console.log(chalk.yellow('🗎 index.html үүсгэгдлээ'));
   }
 
-  // README.md автоматаар үүсгэх
-  fs.writeFileSync(path.join(fullPath, 'README.md'), `# ${projectName}\n\nЭнэ төслийг Structra CLI ашиглан үүсгэсэн.`);
+  const { wantsReadme } = await inquirer.prompt({
+  type: 'confirm',
+  name: 'wantsReadme',
+  message: '📘 README.md үүсгэх үү?',
+  default: true
+});
+
+if (wantsReadme) {
+  fs.writeFileSync(
+    path.join(fullPath, 'README.md'),
+    `# ${projectName}\n\nЭнэ төслийг Structra CLI ашиглан үүсгэсэн.`
+  );
   console.log(chalk.yellow('🗎 README.md үүсгэгдлээ'));
+}
 
   // Хамгийн сүүлийн замыг хадгалах
   saveConfig({ lastPath: projectPath });
@@ -142,5 +153,14 @@ async function askToAddFileOrFolder(currentPath) {
     }
   }
 }
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+const pkg = require('./package.json');
 
+// Аргумент шалгах
+const args = process.argv.slice(2);
+if (args.includes('--version') || args.includes('-v')) {
+  console.log(`Structra CLI v${pkg.version}`);
+  process.exit(0);
+}
 main();
