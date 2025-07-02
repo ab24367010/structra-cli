@@ -12,7 +12,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const configPath = path.join(os.homedir(), '.structra-config.json');
 
-console.log(chalk.cyan.bold('\n🚀 Welcome to Structra CLI v1.1\n'));
+console.log(chalk.cyan.bold('\n🚀 Welcome to Structra CLI v1.1.1\n'));
 
 function saveConfig(config) {
   try {

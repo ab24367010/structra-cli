@@ -21,7 +21,23 @@
 ## ⚙️ Суулгах
 
 ```bash
+cd ~
+mkdir structra
+cd structra
 git clone https://github.com/ab24367010/structra-cli.git
 cd structra-cli
 npm install
-npm install -g .
+sudo npm install -g .
+
+## ⚙️ Эхлүүлэх
+
+```bash
+sudo structra
+
+## ⚙️ Хуучин version устгах
+
+```bash
+cd ~
+cd structra
+sudo npm uninstall -g structra-cli
+rm -rf structra-cli
