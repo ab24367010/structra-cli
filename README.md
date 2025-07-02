@@ -29,10 +29,14 @@ cd structra-cli
 npm install
 sudo npm install -g .
 
+---
+
 ## ⚙️ Эхлүүлэх
 
 ```bash
 sudo structra
+
+---
 
 ## ⚙️ Хуучин version устгах
 
