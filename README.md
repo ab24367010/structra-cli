@@ -25,8 +25,7 @@
 git clone https://github.com/ab24367010/structra-cli.git ~/structra-cli
 cd ~/structra-cli
 npm install
-sudo npm install -g .
-cd ~
+npm link
 
 ```
 
@@ -34,7 +33,7 @@ cd ~
 
 ```bash
 
-sudo structra
+structra
 
 ```
 
@@ -42,4 +41,4 @@ sudo structra
 
 ```bash
 
-sudo structra --uninstall
+npm uninstall -g structra
