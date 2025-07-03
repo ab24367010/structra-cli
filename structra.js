@@ -159,8 +159,26 @@ const pkg = require('./package.json');
 
 // Аргумент шалгах
 const args = process.argv.slice(2);
+
 if (args.includes('--version') || args.includes('-v')) {
   console.log(`Structra CLI v${pkg.version}`);
   process.exit(0);
 }
+
+if (args.includes('--uninstall') || args.includes('uninstall')) {
+  try {
+    const binPath = '/usr/local/bin/structra';
+    if (fs.existsSync(binPath)) {
+      fs.unlinkSync(binPath);
+      console.log(chalk.red('🗑 Structra CLI амжилттай устлаа!'));
+    } else {
+      console.log(chalk.yellow('⚠️ structra команд системд бүртгэлгүй байна.'));
+    }
+  } catch (err) {
+    console.log(chalk.red(`❌ Устгах үед алдаа гарлаа: ${err.message}`));
+  }
+  process.exit(0);
+}
+
 main();
+
